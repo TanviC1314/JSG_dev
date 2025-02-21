@@ -12,6 +12,7 @@ import '../assets/css/onepage-scroll.css';
 const Index = () => {
   const [isAccepted, setIsAccepted] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,12 +20,16 @@ const Index = () => {
     }, 1500);
   }, []);
 
+  const toggleMobileNav = () => {
+    setIsMobileNavActive(!isMobileNavActive);
+  };
+
   return (
     <>
       <header id="header" className="header d-flex align-items-center fixed-top" style={{ backgroundColor: 'rgb(218, 226, 235)' }}>
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <Link to="/" className="logo d-flex align-items-center me-auto me-lg-0">
-          <img 
+            <img 
               src="/assets/img/jsg_logo.png" 
               alt="jsg Logo" 
               style={{ 
@@ -35,6 +40,22 @@ const Index = () => {
               }} 
             />
           </Link>
+          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
+            <ul>
+              <li><a href="home">Home</a></li>
+              <li><a href="founder">Partners</a></li>
+              <li><a href="areaOfPractice">Area of Practice</a></li>
+              <li><a href="careers">Career</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+            <div className="header-social-links">
+              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
+            </div>
+          </nav>
+          <i 
+            className={`mobile-nav-toggle ${isMobileNavActive ? 'bi bi-x mobile-nav-hide' : 'bi bi-list mobile-nav-show'}`}
+            onClick={toggleMobileNav}
+          ></i>
         </div>
       </header>
 

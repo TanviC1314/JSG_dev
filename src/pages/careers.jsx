@@ -50,7 +50,7 @@ function Careers() {
           <a href="home" className="logo d-flex align-items-center me-auto me-lg-0">
             <img src="assets/img/jsg_logo.png" alt="jsg" />
           </a>
-          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
+          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
             <ul>
               <li><a href="home">Home</a></li>
               <li><a href="founder">Founder</a></li>

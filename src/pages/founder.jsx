@@ -26,13 +26,13 @@ function Founder() {
 
   return (
     <div>
-      <header style={{marginTop:"-20px", marginBottom:"-100px"}} id="header" className="header d-flex align-items-center fixed-top">
+      <header id="header" className="header d-flex align-items-center fixed-top" style={{ backgroundColor: 'rgb(218, 226, 235)' }}>
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a href="home" className="logo d-flex align-items-center me-auto me-lg-0">
-            <img style={{height:"100px"}} src="assets/img/SC_Logo.png" alt="" />
+            <img style={{height:"100px"}} src="assets/img/jsg_logo.png" alt="" />
           </a>
 
-          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
+          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
             <ul>
               <li><a href="home">Home</a></li>
               <li><a href="founder" className="active">Partners</a></li>

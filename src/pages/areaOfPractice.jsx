@@ -44,16 +44,16 @@ function AreaOfPractice() {
       >
         <div  className="line"></div>
       </div>
-      <header style={{background: 'rgb(218, 226, 235)'}} id="header" className="header d-flex align-items-center fixed-top">
+      <header id="header" className="header d-flex align-items-center fixed-top" style={{ backgroundColor: 'rgb(218, 226, 235)' }}>
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a href="home" className="logo d-flex align-items-center me-auto me-lg-0">
             <img src="assets/img/jsg_logo.png" alt="" />
           </a>
-          <nav  id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
+          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
             <ul>
               <li><a href="home">Home</a></li>
               <li><a href="founder">Founder</a></li>
-              <li><a href="areaOfPractice" className="">Area of Practice</a></li>
+              <li><a href="areaOfPractice" className="active">Area of Practice</a></li>
               <li><a href="careers">Career</a></li>
               <li><a href="contact">Contact</a></li>
             </ul>
@@ -61,7 +61,6 @@ function AreaOfPractice() {
               <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
             </div>
           </nav>
-
           <i 
             className={`mobile-nav-toggle ${isMobileNavActive ? 'bi bi-x mobile-nav-hide' : 'bi bi-list mobile-nav-show'}`}
             onClick={toggleMobileNav}

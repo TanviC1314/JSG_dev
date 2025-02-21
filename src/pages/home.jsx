@@ -126,16 +126,16 @@ function Home() {
             <img style={{height:"200px"}} src="/assets/img/jsg_logo.png" alt="" />
           </a>
 
-          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
+          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
             <ul>
-              <li><a href="home" className={`${isMobileNavActive || isScrolled ? 'text-black' : 'text-white'}`}>Home</a></li>
-              <li><a href="founder" className={`${isMobileNavActive || isScrolled ? 'text-black' : 'text-white'}`}>Partners</a></li>
-              <li><a href="areaOfPractice" className={`${isMobileNavActive || isScrolled ? 'text-black' : 'text-white'}`}>Area of Practice</a></li>
-              <li><a href="careers" className={`${isMobileNavActive || isScrolled ? 'text-black' : 'text-white'}`}>Career</a></li>
-              <li><a href="contact" className={`${isMobileNavActive || isScrolled ? 'text-black' : 'text-white'}`}>Contact</a></li>
+              <li><a href="home">Home</a></li>
+              <li><a href="founder">Partners</a></li>
+              <li><a href="areaOfPractice">Area of Practice</a></li>
+              <li><a href="careers">Career</a></li>
+              <li><a href="contact">Contact</a></li>
             </ul>
             <div className="header-social-links">
-              <a href="https://www.linkedin.com/in/sc-legal" className={`linkedin ${isMobileNavActive || isScrolled ? 'text-black' : 'text-white'}`}><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
             </div>
           </nav>
 
