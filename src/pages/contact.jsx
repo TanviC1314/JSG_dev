@@ -13,6 +13,7 @@ function Contact() {
 
   useEffect(() => {
     document.body.style.overflow = isLoading ? 'hidden' : 'auto';
+    document.body.style.backgroundColor = 'rgb(218, 226, 235)';
   }, [isLoading]);
 
   const toggleMobileNav = () => {
@@ -26,34 +27,33 @@ function Contact() {
   return (
     <div>
   
-    <header id="header" className="header d-flex align-items-center fixed-top" style={{ backgroundColor: 'rgb(218, 226, 235)' }}>
-      <div className="container-fluid d-flex align-items-center justify-content-between">
-  
-        <a href="home" className="logo d-flex align-items-center  me-auto me-lg-0">
-          <img src="assets/img/jsg_logo.png" alt="" style={{height:"50px"}} />
-        </a>
-  
-        <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
-          <ul>
-            <li><a href="home">Home</a></li>
-          <li><a href="founder">Partners</a></li>
-          <li><a href="areaOfPractice">Area of Practice</a></li>
-          <li><a href="careers">Career</a></li>
-          <li><a href="contact" className="active">Contact</a></li>
-          </ul>
-        </nav>
-  
-        <div className="header-social-links">
-        <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
-      </div>
-        <i 
-            className={`mobile-nav-toggle ${isMobileNavActive ? 'bi bi-x mobile-nav-hide' : 'bi bi-list mobile-nav-show'}`}
-            onClick={toggleMobileNav}
-          ></i>
-  
-      </div>
-    </header>
-    <br />
+  <header id="header" className="header d-flex align-items-center fixed-top" style={{ backgroundColor: 'rgb(218, 226, 235)' }}>
+  <div className="container-fluid d-flex align-items-center justify-content-between">
+
+    <a href="home" className="logo d-flex align-items-center me-auto me-lg-0">
+      <img src="assets/img/jsg_logo.png" alt="" style={{ height: "80px", marginLeft: "20px" }} />
+    </a>
+
+    <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="founder">Partners</a></li>
+        <li><a href="areaOfPractice">Area of Practice</a></li>
+        <li><a href="careers">Career</a></li>
+        <li><a href="contact" className="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div className="header-social-links">
+      <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
+    </div>
+    <i 
+      className={`mobile-nav-toggle ${isMobileNavActive ? 'bi bi-x mobile-nav-hide' : 'bi bi-list mobile-nav-show'}`}
+      onClick={toggleMobileNav}
+    ></i>
+
+  </div>
+</header>
     <br />
     <br />
 
@@ -61,13 +61,13 @@ function Contact() {
 
  
 
-    <section id="contact" className="contact">
+    <section id="contact" className="contact" style={{ background: 'rgb(218, 226, 235)' }}>
       <div className="container">
       <div className="container position-relative">
         <div className="row d-flex justify-content-center">
           <div className="col-lg-6 text-center">
             <br/>
-            <h2 style={{fontSize:60, marginBottom:30,marginTop:30}}>Contact</h2>
+            <h2 style={{fontSize:60, marginBottom:30,marginTop:30, color: 'rgb(120, 138, 158)'}}>Contact</h2>
             <div style={{ marginBottom:50}} className="responsive-map-container">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.8622367466583!2d72.8346857!3d19.1575067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b74bb07961db%3A0xaf5a042da8b76611!2sSC%20Legal!5e0!3m2!1sen!2sin!4v1667476141729!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
@@ -80,32 +80,32 @@ function Contact() {
 
           <div className="col-lg-3">
             <div className="info-item d-flex">
-              <i className="bi bi-geo-alt flex-shrink-0"></i>
+              <i className="bi bi-geo-alt flex-shrink-0" style={{ color: 'rgb(120, 138, 158)', backgroundColor: 'rgb(34, 34, 34)' }}></i>
               <div>
-                <h4>Location:</h4>
-                <p><a href="https://goo.gl/maps/57eZuHDK9RCJ3JWJ6">Office No. 303, B- Wing, 03rd Floor, Oberoi Chambers, Off New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053</a></p>
+                <h4 style={{ color: 'rgb(120, 138, 158)' }}>Location:</h4>
+                <p><a href="https://goo.gl/maps/57eZuHDK9RCJ3JWJ6" style={{ color: 'rgb(120, 138, 158)' }}>Office No. 303, B- Wing, 03rd Floor, Oberoi Chambers, Off New Link Rd, Veera Desai Industrial Estate, Andheri West, Mumbai, Maharashtra 400053</a></p>
               </div>
             </div>
           </div>
 
           <div className="col-lg-3">
             <div className="info-item d-flex">
-              <i className="bi bi-envelope flex-shrink-0"></i>
+              <i className="bi bi-envelope flex-shrink-0" style={{ color: 'rgb(120, 138, 158)', backgroundColor: 'rgb(34, 34, 34)' }}></i>
               <div>
-                <h4>Email:</h4>
-                <p><a href="mailto:parichay@sc-legal.in">parichay@sc-legal.in</a></p>
-                <p><a href="mailto:ankita@sc-legal.in">ankita@sc-legal.in</a></p>
+                <h4 style={{ color: 'rgb(120, 138, 158)', }}>Email:</h4>
+                <p><a href="mailto:parichay@sc-legal.in" style={{ color: 'rgb(120, 138, 158)' }}>parichay@sc-legal.in</a></p>
+                <p><a href="mailto:ankita@sc-legal.in" style={{ color: 'rgb(120, 138, 158)' }}>ankita@sc-legal.in</a></p>
               </div>
             </div>
           </div>
 
           <div className="col-lg-3">
             <div className="info-item d-flex">
-              <i className="bi bi-phone flex-shrink-0"></i>
+              <i className="bi bi-phone flex-shrink-0" style={{ color: 'rgb(120, 138, 158)', backgroundColor: 'rgb(34, 34, 34)' }}></i>
               <div>
-                <h4>Call:</h4>
-                <p><a href="tel:+91-8655415028">+91 86554 15028</a></p>
-                <p><a href="tel:+91-9619560167">+91 96195 60167</a></p>
+                <h4 style={{ color: 'rgb(120, 138, 158)' }}>Call:</h4>
+                <p><a href="tel:+91-8655415028" style={{ color: 'rgb(120, 138, 158)' }}>+91 86554 15028</a></p>
+                <p><a href="tel:+91-9619560167" style={{ color: 'rgb(120, 138, 158)' }}>+91 96195 60167</a></p>
               </div>
             </div>
           </div>
@@ -135,7 +135,9 @@ function Contact() {
                 <div className="error-message"></div>
                 <div className="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div style={{ marginBottom:50}} className="text-center"><button type="submit">Send Message</button></div>
+              <div style={{ marginBottom:50}} className="text-center">
+                <button type="submit" style={{ backgroundColor: 'rgb(120, 138, 158)' }}>Send Message</button>
+              </div>
             </form>
           </div>
 
@@ -178,6 +180,15 @@ function Contact() {
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <script src="assets/js/main.js"></script>
+
+  <style>
+    {`
+      .info-item i:hover {
+        background-color: rgb(120, 138, 158);
+        color: white;
+      }
+    `}
+  </style>
 
 </div>
 

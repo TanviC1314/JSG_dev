@@ -46,29 +46,34 @@ function Careers() {
         <div className="line"></div>
       </div>
       <header id="header" className="header d-flex align-items-center fixed-top" style={{ backgroundColor: 'rgb(218, 226, 235)' }}>
-        <div className="container-fluid d-flex align-items-center justify-content-between">
-          <a href="home" className="logo d-flex align-items-center me-auto me-lg-0">
-            <img src="assets/img/jsg_logo.png" alt="jsg" />
-          </a>
-          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
-            <ul>
-              <li><a href="home">Home</a></li>
-              <li><a href="founder">Founder</a></li>
-              <li><a href="areaOfPractice">Area of Practice</a></li>
-              <li><a href="careers" className="active">Career</a></li>
-              <li><a href="contact">Contact</a></li>
-            </ul>
-            <div className="header-social-links">
-              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
-            </div>
-          </nav>
-          <i 
+      <div className="container-fluid d-flex align-items-center justify-content-between">
+  
+        <a href="home" className="logo d-flex align-items-center  me-auto me-lg-0">
+          <img src="assets/img/jsg_logo.png" alt="" style={{height:"80px", marginLeft:"20px"}} />
+        </a>
+  
+        <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
+          <ul>
+            <li><a href="home">Home</a></li>
+          <li><a href="founder">Partners</a></li>
+          <li><a href="areaOfPractice">Area of Practice</a></li>
+          <li><a href="careers">Career</a></li>
+          <li><a href="contact" className="active">Contact</a></li>
+          </ul>
+        </nav>
+  
+        <div className="header-social-links">
+        <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
+      </div>
+        <i 
             className={`mobile-nav-toggle ${isMobileNavActive ? 'bi bi-x mobile-nav-hide' : 'bi bi-list mobile-nav-show'}`}
             onClick={toggleMobileNav}
           ></i>
-        </div>
-      </header>
-      <br /><br /><br />
+  
+      </div>
+    </header>
+    <br />
+    <br />
       <main id="main">
         
         <section id="contact" className="contact">
@@ -76,7 +81,7 @@ function Careers() {
           <div className="container position-relative">
             <div className="row d-flex justify-content-center">
               <div className="col-lg-6 text-center">
-                <h2 style={{fontSize:60, marginBottom:50,marginTop:40}}>Career</h2>
+                <h2 style={{fontSize:60, marginBottom:50,marginTop:40, color: 'rgb(120, 138, 158)'}}>Career</h2>
               </div>
             </div>
           </div>
@@ -107,7 +112,9 @@ function Careers() {
                     <div className="error-message"></div>
                     <div className="sent-message">Your details has been sent. Thank you!</div>
                   </div>
-                  <div className="text-center"><button type="submit">Send</button></div>
+                  <div className="text-center">
+                    <button type="submit" style={{ backgroundColor: 'rgb(120, 138, 158)' }}>Send</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -116,6 +123,14 @@ function Careers() {
           <br/>
         </section>
       </main>
+      <style>
+        {`
+          .header-social-links a:hover {
+            background-color: rgb(120, 138, 158) !important;
+            color: white !important;
+          }
+        `}
+      </style>
     </div>
   )
 }

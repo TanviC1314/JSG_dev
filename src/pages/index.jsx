@@ -33,10 +33,7 @@ const Index = () => {
               src="/assets/img/jsg_logo.png" 
               alt="jsg Logo" 
               style={{ 
-                width: '70px', 
-                '@media (max-width: 768px)': { 
-                  width: '20px'
-                } 
+                width: '70px'
               }} 
             />
           </Link>
@@ -49,7 +46,9 @@ const Index = () => {
               <li><a href="contact">Contact</a></li>
             </ul>
             <div className="header-social-links">
-              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin" style={{ color: 'rgb(120, 138, 158)' }}>
+                <i className="bi bi-linkedin"></i>
+              </a>
             </div>
           </nav>
           <i 
@@ -84,7 +83,7 @@ const Index = () => {
             <p style={{
               fontSize: '24px',
               fontWeight: '600',
-              color: '#DABA6D',
+              color: 'rgb(120, 138, 158)', /* Changed color */
               margin: 0
             }}>
               Disclaimer
@@ -163,7 +162,7 @@ const Index = () => {
               onClick={(e) => !isAccepted && e.preventDefault()}
               style={{
                 padding: '10px 30px',
-                backgroundColor: '#DABA6D',
+                backgroundColor: 'rgb(120, 138, 158)', // Changed button color
                 color: '#333',
                 borderRadius: '4px',
                 textDecoration: 'none',
@@ -200,7 +199,9 @@ const Index = () => {
       <main id="main" data-aos="fade" data-aos-delay="1500">
       </main>
 
-  
+      <div className="text-center">
+        <button type="submit" style={{ backgroundColor: 'rgb(120, 138, 158)' }}>Send</button>
+      </div>
 
       <Link
         to="#"
@@ -228,6 +229,14 @@ const Index = () => {
       >
         <div className="line"></div>
       </div>
+      <style>
+        {`
+          .header-social-links a:hover {
+            background-color: rgb(120, 138, 158) !important;
+            color: white !important;
+          }
+        `}
+      </style>
     </>
   );
 };

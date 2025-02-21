@@ -135,7 +135,9 @@ function Home() {
               <li><a href="contact">Contact</a></li>
             </ul>
             <div className="header-social-links">
-              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin" style={{ color: 'rgb(120, 138, 158)' }}>
+                <i className="bi bi-linkedin"></i>
+              </a>
             </div>
           </nav>
 
@@ -151,7 +153,7 @@ function Home() {
         <div style={{marginLeft:100}} className="text-left">
           <h2 style={{
             fontSize: '14px',
-            color: '#DABA6D',
+            color: 'rgb(120, 138, 158)', /* Changed color */
             textTransform: 'uppercase',
             fontFamily: '"Poppins", Arial, sans-serif',
             fontWeight: 800,
@@ -226,7 +228,7 @@ function Home() {
                     rel="noopener noreferrer"
                     className="contact-item"
                   >
-                    <i className="location-icon fas fa-map-marker-alt"></i>
+                    <i className="location-icon fas fa-map-marker-alt" style={{ color: 'rgb(120, 138, 158)' }}></i>
                     <span>
                       SC Legal, Office No. 303, B- Wing, 03rd Floor, Oberoi Chambers, 
                       Off New Link Rd, Veera Desai Industrial Estate, Andheri West, 
@@ -248,7 +250,7 @@ function Home() {
                     href="tel:+918655415028" 
                     className="contact-item"
                   >
-                    <i className="phone-icon fas fa-phone"></i>
+                    <i className="phone-icon fas fa-phone" style={{ color: 'rgb(120, 138, 158)' }}></i>
                     <span>+91 86554 15028</span>
                   </a>
                   <a 
@@ -264,7 +266,7 @@ function Home() {
                     href="mailto:parichay@sc-legal.in" 
                     className="contact-item"
                   >
-                    <i className="email-icon fas fa-envelope"></i>
+                    <i className="email-icon fas fa-envelope" style={{ color: 'rgb(120, 138, 158)' }}></i>
                     <span>parichay@sc-legal.in</span>
                   </a>
                   <a 
@@ -276,6 +278,10 @@ function Home() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="text-center">
+            <button type="submit" style={{ backgroundColor: 'rgb(120, 138, 158)' }}>Send</button>
           </div>
 
           <div className="footer-bottom">
