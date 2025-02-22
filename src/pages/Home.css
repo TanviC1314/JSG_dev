@@ -123,26 +123,9 @@ body, html {
   }
 }
 
-/* Preloader animation */
-.line {
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #DABA6D, transparent);
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 /* Ensure the preloader background color is set */
 #preloader {
-  background-color: rgb(218, 226, 235);
+  display: none;
 }
 
 /* Responsive styles */

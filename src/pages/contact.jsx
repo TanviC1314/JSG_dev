@@ -2,14 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../assets/css/main.css'
 
 function Contact() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isLoading ? 'hidden' : 'auto';
@@ -34,13 +28,13 @@ function Contact() {
       <img src="assets/img/jsg_logo.png" alt="" style={{ height: "80px", marginLeft: "20px" }} />
     </a>
 
-    <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>
-      <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="founder">Partners</a></li>
-        <li><a href="areaOfPractice">Area of Practice</a></li>
-        <li><a href="careers">Career</a></li>
-        <li><a href="contact" className="active">Contact</a></li>
+    <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`} style={{ backgroundColor: isMobileNavActive ? 'white' : 'transparent', color: 'black' }}>
+      <ul style={{ backgroundColor: isMobileNavActive ? 'rgba(255, 255, 255, 0.7)' : 'transparent' }}>
+        <li><a href="home" className={window.location.pathname === '/home' ? 'active' : ''} style={{ color: 'black' }}>Home</a></li>
+        <li><a href="founder" className={window.location.pathname === '/founder' ? 'active' : ''} style={{ color: 'black' }}>Partners</a></li>
+        <li><a href="areaOfPractice" className={window.location.pathname === '/areaOfPractice' ? 'active' : ''} style={{ color: 'black' }}>Area of Practice</a></li>
+        <li><a href="careers" className={window.location.pathname === '/careers' ? 'active' : ''} style={{ color: 'black' }}>Career</a></li>
+        <li><a href="contact" className={window.location.pathname === '/contact' ? 'active' : ''} style={{ color: 'black' }}>Contact</a></li>
       </ul>
     </nav>
 
@@ -151,27 +145,6 @@ function Contact() {
 
 
   <a href="#" className="scroll-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
-
-  <div 
-        id="preloader"
-        style={{
-          display: isLoading ? 'flex' : 'none',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'white',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 2000,
-          transition: 'opacity 0.5s ease-in-out',
-          opacity: isLoading ? '1' : '0',
-          overflow: 'hidden'
-        }}
-      >
-        <div className="line"></div>
-      </div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>

@@ -8,7 +8,6 @@ import "../css/magnific-popup.css";
 import "./Home.css"; // Make sure to create this file for the new styles
 
 function Home() {
-  const [isLoading, setIsLoading] = useState(true);
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
   const [displayText, setDisplayText] = useState("");
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -22,14 +21,8 @@ function Home() {
   const pauseTime = 2000;
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
+    document.body.style.overflow = "auto";
   }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = isLoading ? "hidden" : "auto";
-  }, [isLoading]);
 
   useEffect(() => {
     let timer;
@@ -88,63 +81,34 @@ function Home() {
 
   return (
     <div className="home-container" style={{ fontFamily: '"Poppins", Arial, sans-serif' }}>
-      <div 
-        id="preloader"
-        style={{
-          display: isLoading ? 'flex' : 'none',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgb(218, 226, 235)', // Ensure background color is set
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 2000,
-          transition: 'opacity 0.5s ease-in-out',
-          opacity: isLoading ? '1' : '0',
-          overflow: 'hidden'
-        }}
-      >
-        <div className="line"></div>
-      </div>
       <div className="background-overlay" style={{ backgroundImage: "url('/assets/img/practice-1.jpg')" }}></div>
       
       <header 
         id="header" 
-        className={`header d-flex align-items-center fixed-top`} 
-        style={{ 
-          backgroundColor: 'rgb(218, 226, 235)', // Changed header color
-          transition: 'background-color 0.3s ease',
-          padding: '2px 50px',
-          marginBottom:"0px",
-          height:"80px" // Reduced padding
-        }}
+        className="header d-flex align-items-center fixed-top" 
+        style={{ backgroundColor: 'rgb(218, 226, 235)' }}
       >
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a href="home" className="logo d-flex align-items-center me-auto me-lg-0">
-            <img style={{height:"200px"}} src="/assets/img/jsg_logo.png" alt="" />
+            <img src="assets/img/jsg_logo.png" alt="" style={{ height: "80px", marginLeft: "20px" }} />
           </a>
 
-          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''} mx-auto`}>
-            <ul>
-              <li><a href="home">Home</a></li>
-              <li><a href="founder">Partners</a></li>
-              <li><a href="areaOfPractice">Area of Practice</a></li>
-              <li><a href="careers">Career</a></li>
-              <li><a href="contact">Contact</a></li>
+          <nav id="navbar" className={`navbar ${isMobileNavActive ? 'mobile-nav-active' : ''}`} style={{ backgroundColor: isMobileNavActive ? 'white' : 'transparent', color: 'black' }}>
+            <ul style={{ backgroundColor: isMobileNavActive ? 'rgba(255, 255, 255, 0.7)' : 'transparent' }}>
+              <li><a href="home" className={window.location.pathname === '/home' ? 'active' : ''} style={{ color: 'black' }}>Home</a></li>
+              <li><a href="founder" className={window.location.pathname === '/founder' ? 'active' : ''} style={{ color: 'black' }}>Partners</a></li>
+              <li><a href="areaOfPractice" className={window.location.pathname === '/areaOfPractice' ? 'active' : ''} style={{ color: 'black' }}>Area of Practice</a></li>
+              <li><a href="careers" className={window.location.pathname === '/careers' ? 'active' : ''} style={{ color: 'black' }}>Career</a></li>
+              <li><a href="contact" className={window.location.pathname === '/contact' ? 'active' : ''} style={{ color: 'black' }}>Contact</a></li>
             </ul>
-            <div className="header-social-links">
-              <a href="https://www.linkedin.com/in/sc-legal" className="linkedin" style={{ color: 'rgb(120, 138, 158)' }}>
-                <i className="bi bi-linkedin"></i>
-              </a>
-            </div>
           </nav>
 
+          <div className="header-social-links">
+            <a href="https://www.linkedin.com/in/sc-legal" className="linkedin"><i className="bi bi-linkedin"></i></a>
+          </div>
           <i 
             className={`mobile-nav-toggle ${isMobileNavActive ? 'bi bi-x mobile-nav-hide' : 'bi bi-list mobile-nav-show'}`}
             onClick={toggleMobileNav}
-            style={{ color: 'black' }}
           ></i>
         </div>
       </header>
@@ -280,10 +244,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="text-center">
-            <button type="submit" style={{ backgroundColor: 'rgb(120, 138, 158)' }}>Send</button>
-          </div>
-
+       
           <div className="footer-bottom">
             <div className="row">
               <div className="col-md-6">
